@@ -1,0 +1,15 @@
+{
+  "name": "myfirstnodeproject",
+  "version": "1.0.0",
+  "description": "This is my first Node Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Monica C.",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.7"
+  }
+}

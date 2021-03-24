@@ -1,6 +1,6 @@
 // Variables are used to hold data
 var myFirstVariable = 'Hello world!';
-let myFirstVariable = null;
+// let myFirstVariable = null;
 
 //A variable that doesn;t change once you have assigned a value
 const myFirstConstVariable = null;
@@ -47,7 +47,7 @@ if (false) {} else if (false) {} else if (false) {} else if (false) {}
 if (false) {} 
 if (false) {}
 
-if (false) {} else if (false) {} else ()
+if (false) {} else if (false) {} else {}
 
 // Loops
 
@@ -87,3 +87,5 @@ function myFunction2(myFirstParam) {
 
 myFunction2('Hello world!');
 myFunction2('goodbye world!');
+
+console.log('script is all done!')
