@@ -19,10 +19,10 @@ function quizFind(array, element) {
     return -1;
 }
 
-// console.log(quizFind([3, 4, 10], 10));
-// console.log(quizFind([1, 1, 0, 3, 5], 6));
-// console.log(quizFind(['apple','dog','banana'], 'dog')); //expected output: 1
-// console.log(quizFind([true, false, 'three', 70, 'none'], 6)); //expected output: -1
+console.log(quizFind([3, 4, 10], 10));
+console.log(quizFind([1, 1, 0, 3, 5], 6));
+console.log(quizFind(['apple','dog','banana'], 'dog')); //expected output: 1
+console.log(quizFind([true, false, 'three', 70, 'none'], 6)); //expected output: -1
 
 // Create a function called quizLotto().
 // 1. Parameters: none.
