@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Howdy!</h1>
+    <p><a href='http://localhost:3000/secret'>I solemnly swear that I am up to no good...</a></p>
+    <form>
+        <label for='number'>Number</label>
+        <input type='number' id='number'>
+        <button>Submit</submit>
+    </form>
+    <script>
+        // Note that document.ready is deprecated. In replacement, use an anonymous function.
+        $(function() {
+            $('button').click(function(event) {
+                // We don't want the button to submit a GET request.
+                event.preventDefault();
+
+                // jQuery POST Request. This is a shorthand for the AJAX method.
+                    // Takes three arguments: address, data you want to send, a callback fxn if request is successful. 
+                    // Sends a request to the backend. 
+                $.post('http://localhost:3000/submitNumber', 'I come in peace', 
+                function(response) {
+                    console.log('Are you friend or foe?');
+                } );
+            });
+        });
+    </script>
+</body>
+</html>

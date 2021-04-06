@@ -16,7 +16,7 @@ class Task {
 let fileContents = fs.readFileSync('tasks.json', 'utf-8');
 // Converts json file to a JS object.
 let previousTasks = JSON.parse(fileContents);
-// Inside the JS object, there is a property called tasksList
+// Inside the JS object, there is a key called tasksList
 let taskArray = previousTasks.tasksList;
 // This will be temporarily empty because there are no completed tasks at this time. When populated, this will be reassigned to previousTasks.tasksListComplete
 // Note that taskArrayCompleted is not listed when "list" action is performed.
@@ -122,8 +122,3 @@ fs.writeFileSync('tasks.json', objectToSave, 'utf-8');
 
 
 
-//let objectString = `"${taskArray[0].text}" ${taskArray[0].priority} ${taskArray[0].dueDate}`;
-
-// fs.writeFileSync('tasks.txt',taskArray.toString(), 'utf-8');
-
-// console.log(taskArray);

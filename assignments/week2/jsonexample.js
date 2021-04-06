@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-// Can only hold one object per JSON file. 
-// The way around this is to store objects within a main object.
+// JSON files are primarily used for transmitting data between a web application and a server. 
+// Can only hold one object per JSON file. The way around this is to store objects within a main object.
 fs.writeFileSync('myJSON.json', '', 'utf-8');
 
 let myObject = {
