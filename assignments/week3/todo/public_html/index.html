@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel = 'stylesheet' href='styles/reset.css'>
+    <link rel = 'stylesheet' href='styles/main.css'>
+</head>
+<body>
+    <div id='container'>
+        <h1>Welcome to To-Do App</h1>
+        <section id='new-task'>
+            <h2>Add Task</h2>
+            <label for='task-text'>Task</label>
+            <input type='text' id='task-text'>
+            <br>
+            <label for='high'>High</label>
+            <input type='radio' name='priority' id='high'>
+            <label for='medium'>Medium</label>
+            <input type='radio' name='priority' id='medium'>
+            <label for='low'>Low</label>
+            <input type='radio' name='priority' id='low'>
+            <br>
+            <label for='due-date'>Due Date</label>
+            <input type='date' id='due-date'>
+            <button>Add</button>
+        </section>
+        <section id='task-list'>
+            <h2>Incomplete Tasks</h2>
+            <button>Incomplete</button>
+            <button>Complete</button>
+
+            <div class='task'>
+                <button>&#10004;</button>
+                <p>Task</p>
+                <button>&#1006;</button>
+                <div class='edit-panel'>
+                    <label for='task-text'>Task</label>
+                    <input type='text' id='task-text'>
+                    <br>
+                    <label for='high'>High</label>
+                    <input type='radio' name='priority' id='high'>
+                    <label for='medium'>Medium</label>
+                    <input type='radio' name='priority' id='medium'>
+                    <label for='low'>Low</label>
+                    <input type='radio' name='priority' id='low'>
+                    <br>
+                    <label for='due-date'>Due Date</label>
+                    <input type='date' id='due-date'>
+                    <button>Save Changes</button>
+                </div>
+            </div>
+            <div class='task'>
+                <button>&#10004;</button>
+                <p>Task</p>
+                <button>&#1006;</button>
+            </div>
+            <div class='task'>
+                <button>&#10004;</button>
+                <p>Task</p>
+                <button>&#1006;</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

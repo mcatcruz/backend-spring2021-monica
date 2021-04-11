@@ -15,19 +15,29 @@
         <button>Submit</submit>
     </form>
     <script>
+        // Wherever our project will live in. 
+        const baseUrl = 'http://localhost:3000';
         // Note that document.ready is deprecated. In replacement, use an anonymous function.
         $(function() {
             $('button').click(function(event) {
                 // We don't want the button to submit a GET request.
                 event.preventDefault();
 
+                let objectToSend = {
+                    message: 'I come in peace.',
+                    numberGuess: number
+                }
+
                 // jQuery POST Request. This is a shorthand for the AJAX method.
-                    // Takes three arguments: address, data you want to send, a callback fxn if request is successful. 
+                    // Takes three arguments: address, data you want to send IN OBJECT FORM, a callback fxn if request is successful. 
                     // Sends a request to the backend. 
-                $.post('http://localhost:3000/submitNumber', 'I come in peace', 
+                    // data needs to be in an object otherwise throws an error. This is because request.body results in a null prototype, which doesn't have toString() available to it.
+                $.post(baseUrl + '/submitNumber', objectToSend, 
                 function(response) {
+                    // This is the responseObject from the backend. It becomes the response argument in this function in the frontend. This function types the message into the frontend in a paragraph (<p>) element.
+                    $("#results").text(response.message);
                     console.log('Are you friend or foe?');
-                } );
+                });
             });
         });
     </script>

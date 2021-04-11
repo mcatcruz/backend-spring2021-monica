@@ -1,0 +1,26 @@
+div#container {
+    margin: 0 auto;
+    width: 60%;
+}
+section#new-task {
+    height: 100px;
+    background-color: antiquewhite;
+}
+section#task-list {
+    height: 500px;
+    background-color: burlywood;
+}
+
+div.task {
+    background-color: cornsilk;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.task p {
+    display: inline-block;
+}
+
+div.edit-panel {
+    background-color: gainsboro;
+}

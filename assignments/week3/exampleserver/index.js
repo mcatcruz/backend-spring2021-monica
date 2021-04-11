@@ -8,6 +8,15 @@ const app = express();
     // Using the Server class to create 
 const http = require('http').Server(app);
 
+// We need a package that will convert JSON files 
+    // const bodyParser = require('body-parser');s DEPRECATED 
+// Use express to convert our POST data to proper JS datatypes. CALL METHODS
+// The following lets Express understand JSON so that you don't get undefined from request.body (see line 38)
+app.use(express.json()); 
+app.use(express.urlencoded(
+    {extended: false}
+));
+
 const port = 3000; // Most common "development" port is 8080.
 
 // Provide the port number to listen to for Express.
@@ -24,9 +33,15 @@ app.use('/', express.static('public_html/'));
 app.use('/secretwebsite', express.static('public_html/secret'));
 
 // POST routes
-    // GET can only receive data. 
-    // POST can send and receive data.
-    // Will handle the request from the front-end.
+    // POST can send and receive data (GET can only receive data). 
+    // Will handle the request that was received from the front-end.
     app.post('/submitNumber', function(request, response) {
-        response.send('Mischief managed.');
+        // This will result in an object. Need to convert to a string because objects can't be concatenated.
+        let dataFromFrontEnd = request.body; 
+        console.log('Visitor says: ' + dataFromFrontEnd.message);
+        let responseObject = {
+            message: "Mischief Managed.",
+            numberGuess: null
+        }
+        response.send(responseObject);
     });
