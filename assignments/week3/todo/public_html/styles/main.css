@@ -1,11 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Work+Sans:wght@500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    border-radius: 5px;
+    border-style: none;
+}
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    padding: 25px;
+    text-align: center;
+}
 div#container {
     margin: 0 auto;
     width: 60%;
 }
+
+/* Add Task */
 section#new-task {
-    height: 100px;
-    background-color: antiquewhite;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    /* This will ensure that all corners are rounded (the h2 corners will be hidden) */
+    overflow: hidden;
 }
+section#new-task h2 {
+    padding: 12px;
+    background-color: #3498db;
+    font-weight: bold;
+}
+section#new-task label {
+    padding: 12px;
+    display: inline-block;
+    line-height: 24px;
+}
+section#new-task input {
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: inline-block;
+    line-height: 24px;
+}
+section#new-task input:nth-child(3) {
+    width: 85%;
+}
+
+/* Task List and Edit Task */
 section#task-list {
     height: 500px;
     background-color: burlywood;

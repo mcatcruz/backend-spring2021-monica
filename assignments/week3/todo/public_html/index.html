@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Line 9 is from jQuery CDN -->
+    <script src='scripts/fa-all.min.js'></script>
     <link rel = 'stylesheet' href='styles/reset.css'>
-    <link rel = 'stylesheet' href='styles/main.css'>
+    <!-- Want fontawesome css file to be before main.css so that it doesn't overwrite any of our code! -->
+    <link rel='stylesheet' href='styles/fa-all.min.css'> 
+    <link rel = 'stylesheet' href='styles/main.css'> 
 </head>
 <body>
     <div id='container'>
-        <h1>Welcome to To-Do App</h1>
+        <h1>To-Do</h1>
         <section id='new-task'>
             <h2>Add Task</h2>
             <label for='task-text'>Task</label>
@@ -32,9 +37,9 @@
             <button>Complete</button>
 
             <div class='task'>
-                <button>&#10004;</button>
+                <button><i class="fas fa-check"></i></button>
                 <p>Task</p>
-                <button>&#1006;</button>
+                <button><i class="fas fa-minus"></i></button>
                 <div class='edit-panel'>
                     <label for='task-text'>Task</label>
                     <input type='text' id='task-text'>
@@ -63,5 +68,6 @@
             </div>
         </section>
     </div>
+    <script src='scripts/main.js'></script>
 </body>
 </html>
