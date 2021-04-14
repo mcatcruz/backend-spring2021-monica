@@ -16,55 +16,48 @@
     <div id='container'>
         <h1>To-Do</h1>
         <section id='new-task'>
-            <h2>Add Task</h2>
-            <label for='task-text'>Task</label>
-            <input type='text' id='task-text'>
-            <br>
-            <label for='high'>High</label>
-            <input type='radio' name='priority' id='high'>
-            <label for='medium'>Medium</label>
-            <input type='radio' name='priority' id='medium'>
-            <label for='low'>Low</label>
-            <input type='radio' name='priority' id='low'>
-            <br>
-            <label for='due-date'>Due Date</label>
-            <input type='date' id='due-date'>
-            <button>Add</button>
+            <h2>Add A Task</h2>
+            <div>
+                <label for='task-text'>Task</label>
+                <input type='text' id='task-text'>
+                <br>
+                <label for='high'>High</label>
+                <input type='radio' name='priority' id='high'>
+                <label for='medium'>Medium</label>
+                <input type='radio' name='priority' id='medium'>
+                <label for='low'>Low</label>
+                <input type='radio' name='priority' id='low'>
+                <br>
+                <label for='due-date'>Due Date</label>
+                <input type='date' id='due-date'>
+                <button>Add</button>
+            </div>
         </section>
         <section id='task-list'>
-            <h2>Incomplete Tasks</h2>
-            <button>Incomplete</button>
-            <button>Complete</button>
-
-            <div class='task'>
-                <button><i class="fas fa-check"></i></button>
-                <p>Task</p>
-                <button><i class="fas fa-minus"></i></button>
-                <div class='edit-panel'>
-                    <label for='task-text'>Task</label>
-                    <input type='text' id='task-text'>
-                    <br>
-                    <label for='high'>High</label>
-                    <input type='radio' name='priority' id='high'>
-                    <label for='medium'>Medium</label>
-                    <input type='radio' name='priority' id='medium'>
-                    <label for='low'>Low</label>
-                    <input type='radio' name='priority' id='low'>
-                    <br>
-                    <label for='due-date'>Due Date</label>
-                    <input type='date' id='due-date'>
-                    <button>Save Changes</button>
+            <h2>To-Do List</h2>
+            <button id='incomplete-list'>Incomplete</button>
+            <button id='complete-list'>Complete</button>
+            <div>
+                <div class='task'>
+                    <button><i class="fas fa-check"></i></button>
+                    <p>Task</p>
+                    <button><i class="fas fa-minus"></i></button>
+                    <button><i class="fas fa-pen"></i></button>
+                    <div class='edit-panel'>
+                        <label for='task-text'>Task</label>
+                        <input type='text' id='task-text'>
+                        <br>
+                        <label for='high'>High</label>
+                        <input type='radio' name='priority' id='high'>
+                        <label for='medium'>Medium</label>
+                        <input type='radio' name='priority' id='medium'>
+                        <label for='low'>Low</label>
+                        <input type='radio' name='priority' id='low'>
+                        <br>
+                        <label for='due-date'>Due Date</label>
+                        <input type='date' id='due-date'>
+                    </div>
                 </div>
-            </div>
-            <div class='task'>
-                <button>&#10004;</button>
-                <p>Task</p>
-                <button>&#1006;</button>
-            </div>
-            <div class='task'>
-                <button>&#10004;</button>
-                <p>Task</p>
-                <button>&#1006;</button>
             </div>
         </section>
     </div>

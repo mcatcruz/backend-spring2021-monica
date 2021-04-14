@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Work+Sans:wght@500&display=swap');
 
+/* Universal Values */
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     background-color: #ecf0f1;
     color: #2c3e50;
-}
-button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75em;
-    border-radius: 5px;
-    border-style: none;
 }
 h1 {
     font-family: 'Work Sans', sans-serif;
@@ -20,11 +15,11 @@ h1 {
 }
 div#container {
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
 }
 
-/* Add Task */
-section#new-task {
+/* Add Task, some parts shared with Task List Section */
+section#new-task, section#task-list {
     background-color: #2980b9;
     color: #ecf0f1;
     margin-bottom: 24px;
@@ -32,44 +27,112 @@ section#new-task {
     /* This will ensure that all corners are rounded (the h2 corners will be hidden) */
     overflow: hidden;
 }
-section#new-task h2 {
+section#new-task div {
+    margin: 12px;
+}
+section#new-task h2, section#task-list h2 {
     padding: 12px;
     background-color: #3498db;
     font-weight: bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
 }
-section#new-task label {
+section#new-task label, div.edit-panel label {
     padding: 12px;
     display: inline-block;
-    line-height: 24px;
 }
-section#new-task input {
-    height: 48px;
+section#new-task input, div.edit-panel input {
+    height: 33px;
     margin: 0;
     padding: 0;
     border: none;
     display: inline-block;
-    line-height: 24px;
+    /* Removes small gap between input box and h2 */
+    vertical-align: top;
+    border-radius: 5px;
+    font-size: 20px;
+    /* This will match the top and bottom spacing around the text. */
+    padding-left: 12px;
+    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
 }
-section#new-task input:nth-child(3) {
+section#new-task input[type='radio'], div.edit-panel input[type='radio'] {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+section#new-task div input:nth-child(2), div.edit-panel input:nth-child(2) {
     width: 85%;
+    float: right;
+}
+section#new-task button {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    vertical-align: top;
+    float: right;
+    font-size: 0.85em;
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 12px;
 }
 
-/* Task List and Edit Task */
+/* Task List and Edit Task, overrides some Add Task CSS */
 section#task-list {
-    height: 500px;
-    background-color: burlywood;
+    background-color: #8e44ad;
+    padding-bottom: 12px;
 }
-
+button#incomplete-list, button#complete-list {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    vertical-align: top;
+    font-size: 0.75em;
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+section#task-list h2{
+    background-color: #9b59b6;
+}
 div.task {
-    background-color: cornsilk;
-    width: 80%;
-    margin: 0 auto;
+    background-color: #d35400;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.task p {
+div.task p {
     display: inline-block;
+    margin: 12px;
 }
-
+div.task > button {
+    width: 48px;
+    height: 48px;
+    vertical-align: top;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    font-size: 1em;
+    color: #ecf0f1;
+}
+div.task > button:nth-child(4), div.task > button:nth-child(3) {
+    float: right;
+}
+div.task > button:hover {
+    background-color: #e67e22;
+}
 div.edit-panel {
-    background-color: gainsboro;
+    background-color: #e67e22;
+    padding: 12px;
 }
