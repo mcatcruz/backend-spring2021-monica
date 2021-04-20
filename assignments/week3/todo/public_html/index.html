@@ -14,50 +14,33 @@
 </head>
 <body>
     <div id='container'>
-        <h1>To-Do</h1>
+        <h1>To-Do List</h1>
         <section id='new-task'>
-            <h2>Add A Task</h2>
+            <h2>Add</h2>
             <div>
                 <label for='task-text'>Task</label>
                 <input type='text' id='task-text'>
                 <br>
-                <label for='high'>High</label>
-                <input type='radio' name='priority' id='high'>
-                <label for='medium'>Medium</label>
-                <input type='radio' name='priority' id='medium'>
-                <label for='low'>Low</label>
-                <input type='radio' name='priority' id='low'>
+                <label for='high'>Must Do</label>
+                <input type='radio' name='priority' id='high' value='1' checked='checked'>
+                <label for='medium'>Should Do</label>
+                <input type='radio' name='priority' id='medium' value='2'>
+                <label for='low'>Could Do</label>
+                <input type='radio' name='priority' id='low' value='3'>
                 <br>
                 <label for='due-date'>Due Date</label>
-                <input type='date' id='due-date'>
-                <button>Add</button>
+                <input type='date' id='due-date' required='require'>
+                <button id='add-task'>Save</button>
             </div>
         </section>
         <section id='task-list'>
-            <h2>To-Do List</h2>
-            <button id='incomplete-list'>Incomplete</button>
-            <button id='complete-list'>Complete</button>
-            <div>
-                <div class='task'>
-                    <button><i class="fas fa-check"></i></button>
-                    <p>Task</p>
-                    <button><i class="fas fa-minus"></i></button>
-                    <button><i class="fas fa-pen"></i></button>
-                    <div class='edit-panel'>
-                        <label for='task-text'>Task</label>
-                        <input type='text' id='task-text'>
-                        <br>
-                        <label for='high'>High</label>
-                        <input type='radio' name='priority' id='high'>
-                        <label for='medium'>Medium</label>
-                        <input type='radio' name='priority' id='medium'>
-                        <label for='low'>Low</label>
-                        <input type='radio' name='priority' id='low'>
-                        <br>
-                        <label for='due-date'>Due Date</label>
-                        <input type='date' id='due-date'>
-                    </div>
-                </div>
+            <h2>Update</h2>
+            <button id='complete-list'>Completed</button>
+            <button id='incomplete-list'>Deleted</button>
+            <div id='tasks'>
+                
+           
+            
             </div>
         </section>
     </div>
