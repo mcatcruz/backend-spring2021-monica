@@ -10,21 +10,25 @@
 \f0\fs24 \cf0 To-Do App\
 - Keep track of tasks\
 	Add tasks\
-		Have a section that offers the ability to add a task\
-		There will be an input for task, radio buttons for urgency, input for due date, submit button\
+		Have a section (new-task id) for adding a task\
+		There will be an input for task, radio buttons for urgency, input for due date, submit (Save) button\
+			Priority will be defined by color: red, orange, yellow, green=complete, grey
+			https://wynd.zendesk.com/hc/en-us/articles/115007137987-The-light-colors-on-my-tracker-don-t-seem-right-
 	Deleting tasks\
 		X next to entry in task list indicating delete function\
 		If clicked, removes task from view. \
 		Confirmation to delete pop-up\
 	Editing tasks\
-		Create a drawer of the current task that shows all information input boxes\
-		Save button\
+		Create a drawer of the current task that shows all information in input boxes\
+			Clicking on task will open the drawer.
+		Save button to save changes\
 	Completing tasks\
 		Checkbox next to each task entry in task list.\
 		Removes entry from incomplete list to complete list.\
+		Use fontawesome for icons
 	List tasks\
 		One view for incomplete tasks and another for completed tasks\
-		Display all task showing to-do item, urgency, due date, number of days since creation\
+		Display all: to-do item, urgency, due date, number of days since creation\
 \
 - Features\
 	Order by urgency\
@@ -56,6 +60,14 @@
 				id: String\
 			\}\
 		receive: \{ \}\
+	
+	update-task:
+		send: {
+			id: String,
+			text: String,
+			priority: String,
+			dueDate: String
+		}
 \
 \
 \

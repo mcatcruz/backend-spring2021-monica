@@ -22,7 +22,7 @@ class Task {
             this.priority = 1;
         } else {
             // ... otherwise, send to setPriority method.
-            results = this.setPriority(priority);
+            let results = this.setPriority(priority);
 
             // If setPriority() fails, set priority to 1.
             if (results === 1) {

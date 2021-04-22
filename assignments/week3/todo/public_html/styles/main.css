@@ -129,7 +129,7 @@ div.task > button {
     font-size: 1em;
     color: #ecf0f1;
 }
-div.task > button:nth-child(4), div.task > button:nth-child(3) {
+div.task > button:nth-child(4), div.task > button:nth-child(5) {
     float: right;
 }
 div.task > button:hover {
@@ -138,4 +138,5 @@ div.task > button:hover {
 div.edit-panel {
     background-color: #F5A4A3;
     padding: 12px;
+    display: none;
 }
