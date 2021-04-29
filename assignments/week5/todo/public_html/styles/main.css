@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Work+Sans:wght@500&display=swap');
+
+/* Universal Values */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: #f7ede2;
+    color: #7C6C77;
+}
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    padding: 25px;
+    text-align: center;
+}
+div#container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Add Task, some parts shared with Task List Section */
+section#new-task, section#task-list {
+    background-color: #f6bd60;
+    color: #f7ede2;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    /* This will ensure that all corners are rounded (the h2 corners will be hidden) */
+    overflow: hidden;
+}
+section#new-task div {
+    margin: 12px;
+}
+section#new-task h2, section#task-list h2 {
+    padding: 12px;
+    background-color: #ee964b;
+    font-weight: bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+section#new-task label, div.edit-panel label {
+    padding: 12px;
+    display: inline-block;
+}
+section#new-task input, div.edit-panel input {
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: inline-block;
+    /* Removes small gap between input box and h2 */
+    vertical-align: top;
+    border-radius: 5px;
+    font-size: 20px;
+    /* This will match the top and bottom spacing around the text. */
+    padding-left: 12px;
+    color: #7C6C77;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7ede2; 
+}
+section#new-task input[type='radio'], div.edit-panel input[type='radio'] {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+section#new-task div input:nth-child(2), div.edit-panel input:nth-child(2) {
+    width: 85%;
+    float: right;
+}
+section#new-task button {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    vertical-align: top;
+    float: right;
+    font-size: 0.85em;
+    color: #7C6C77;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 12px;
+    background-color: #f7ede2;
+}
+
+/* Task List and Edit Task, overrides some Add Task CSS */
+section#task-list {
+    background-color: #A1BAB4;
+    padding-bottom: 12px;
+}
+button#incomplete-list, button#complete-list {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    vertical-align: top;
+    font-size: 0.75em;
+    color: #7C6C77;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7ede2;
+}
+section#task-list h2{
+    background-color: #84A59D; 
+}
+div.task {
+    background-color: #F1807E;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+div.task p {
+    display: inline-block;
+    margin: 12px;
+}
+div.task > button {
+    width: 48px;
+    height: 48px;
+    vertical-align: top;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    font-size: 1em;
+    color: #ecf0f1;
+}
+div.task > button:nth-child(4), div.task > button:nth-child(5) {
+    float: right;
+}
+div.task > button:hover {
+    background-color: #F5A4A3;
+}
+div.edit-panel {
+    background-color: #F5A4A3;
+    padding: 12px;
+    display: none;
+}

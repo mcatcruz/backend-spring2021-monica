@@ -1,40 +1,5 @@
-const md5 = require('md5');
-
 // Define Task class
 class Task {
-    constructor(text, priority, dueDate) {
-        this.setText(text);
-
-        // Assign a dueDate and test if user entry is valid. If not, create a new Date Object.
-        let dateResults = this.setDueDate(dueDate);
-        if (dateResults === 1) {
-            this.dueDate = new Date();
-        }
-
-        // Create a Date object for when the Task object was created.
-        this.dateCreated = new Date();
-
-        // Generate a md5 hash to identify this Task Object.
-        this.id = md5(this.text + this.dateCreated.toString());
-
-        // Test if priority has a value. If not, assign it priority 1...
-        if(!priority) {
-            this.priority = 1;
-        } else {
-            // ... otherwise, send to setPriority method.
-            let results = this.setPriority(priority);
-
-            // If setPriority() fails, set priority to 1.
-            if (results === 1) {
-                this.priority = 1;
-            }
-        }
-        // Set completed and deleted dates to null when the Task is NEW.
-        this.dateCompleted = null;
-        this.dateDeleted = null;
-    }
-
-
     // Getter/Setter for the Task text.
     getText() {
         return this.text;
@@ -80,6 +45,7 @@ class Task {
             return 0;
         } else {
             // If tests failed, return 1.
+            this.dueDate = new Date();
             return 1;
         }
     }
@@ -92,7 +58,7 @@ class Task {
         // Parse the argument into a number. If it fails, return 1.
         priority = parseInt(priority);
         if (Number.isNaN(priority)) {
-            return 1;
+            this.priority = 1;
         } else {
             this.priority = priority;
             return 0;
@@ -122,29 +88,7 @@ class Task {
             return true;
         }
     }
-
-    jsonConvert(object) {
-        this.text = object.text;
-        this.id = object.id;
-        this.priority = object.priority;
-        this.dueDate = new Date(object.dueDate);
-        this.dateCreated = new Date(object.dateCreated);
-
-        if (typeof object.dateCompleted === 'string') {
-            this.dateCompleted = new Date(object.dateCompleted);
-        } else {
-            this.dateCompleted = null;
-        }
-
-        if (typeof object.dateDeleted === 'string') {
-            this.dateDeleted = new Date(object.dateDeleted);
-        } else {
-            this.dateDeleted = null;
-        }
-        return this;
-    }
 }
-
 // Allow other files to use the Task class.
 module.exports = {
     Task: Task

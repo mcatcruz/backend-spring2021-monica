@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Line 9 is from jQuery CDN -->
+    <script src='scripts/fa-all.min.js'></script>
+    <link rel = 'stylesheet' href='styles/reset.css'>
+    <!-- Want fontawesome css file to be before main.css so that it doesn't overwrite any of our code! -->
+    <link rel='stylesheet' href='styles/fa-all.min.css'> 
+    <link rel = 'stylesheet' href='styles/main.css'> 
+</head>
+<body>
+    <div id='container'>
+        <h1>To-Do List</h1>
+        <section id='new-task'>
+            <h2>Add</h2>
+            <div>
+                <label for='task-text'>Task</label>
+                <input type='text' id='task-text'>
+                <br>
+                <label for='high'>Must Do</label>
+                <input type='radio' name='priority' id='high' value='1' checked='checked'>
+                <label for='medium'>Should Do</label>
+                <input type='radio' name='priority' id='medium' value='2'>
+                <label for='low'>Could Do</label>
+                <input type='radio' name='priority' id='low' value='3'>
+                <br>
+                <label for='due-date'>Due Date</label>
+                <input type='date' id='due-date' required='require'>
+                <button id='add-task'>Save</button>
+            </div>
+        </section>
+        <section id='task-list'>
+            <h2>Edit</h2>
+            <button id='complete-list'>Completed</button>
+            <button id='incomplete-list'>Deleted</button>
+            <div id='tasks'>
+                
+           
+            
+            </div>
+        </section>
+    </div>
+    <script src='scripts/main.js'></script>
+</body>
+</html>
