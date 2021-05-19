@@ -54,6 +54,6 @@ for (let street in streets) {
 }
 
 // Print results.
-console.log(`The street with the most police activity is ${highestStreetName} with a total of ${highestStreetCount} incidents.`)
+console.log(`The street with the most police activity is ${highestStreetName} with a total of ${highestStreetCount} incidents.`);
 
 //QUESTION 5: END

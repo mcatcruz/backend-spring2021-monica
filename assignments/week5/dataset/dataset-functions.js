@@ -97,7 +97,7 @@ function quoteFix(entry) {
         return entryReformatted;
     } else {
         // If argument does not contain any quotation marks (i.e. fails regex.test()), then split the argument into an array as is. 
-        return entryArray;
+        return entry.split(',');
     }
 }
 

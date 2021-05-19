@@ -18,15 +18,15 @@ for (let i = 0; i < objectArray.length; i++) {
         // Increment by 1 if the property exists
         var neighborhood = entry['Analysis Neighborhood'];
         resultsQuestion3[neighborhood] += 1;
-    } else; {
+    } else {
         // Otherwise, assign the property a 1 to start the count.
-        resultsQuestion3[neighborhood] = 1;
+        resultsQuestion3[entry['Analysis Neighborhood']] = 1;
     }
 
     if (resultsQuestion3District.hasOwnProperty(entry['Supervisor District'])) {
         resultsQuestion3District[entry['Supervisor District']] += 1;
     } else {
-        resultsQuestion3District[entry['Supervisor Districtr']] = 1;
+        resultsQuestion3District[entry['Supervisor District']] = 1;
     }
 }
 
@@ -38,18 +38,18 @@ for (let neighborhood in resultsQuestion3) {
     // Compare districts to each other to determine highest count
     if (resultsQuestion3[neighborhood] > highestNeighborhoodCount) {
         highestNeighborhoodCount = resultsQuestion3[neighborhood];
-        highestNeighborhoodCount = neighborhood;
+        highestNeighborhoodName = neighborhood;
     }
 }
 
 // Track the highest neighborhood count
-let highestDistrictCount = 0;
+let highestDistrict = 0;
 let highestDistrictName;
 
 for (let district in resultsQuestion3District) {
     // Compare districts to each other to determine highest count
-    if (resultsQuestion3[district] > highestDistrictCount) {
-        highestDistrictCount = resultsQuestion3[district];
+    if (resultsQuestion3District[district] > highestDistrict) {
+        highestDistrict= resultsQuestion3District[district];
         highestDistrictName = district;
     }
 }

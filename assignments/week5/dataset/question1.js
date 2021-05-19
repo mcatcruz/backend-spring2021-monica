@@ -19,7 +19,8 @@ console.log("What is the most common and least common type of incident that are 
 */
 
 
-
+// Initiate an empty object variable to hold counts.
+let resultsObject = {};
 
 // Skip any objects with the word "Supplement" to avoid duplicates.
 let supplementRegex = /[sS]upplement/m
